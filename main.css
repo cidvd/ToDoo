@@ -6,8 +6,9 @@
 header {
 	display: grid;
 	grid-template-columns: 20% 30% 15% 25% 10%;
-	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 	height: 62px;
+    background-color: rgba(255, 207, 87, 255);
 
 }
 .header-left {
@@ -15,6 +16,7 @@ header {
 	display: flex;
 }
 header img {
+    margin-top: 0.2rem;
 	max-height: 50px;
 	max-width: 50px;
 }
@@ -37,7 +39,8 @@ h1 {
 	color: black;
 }
 .header-right li a:hover {
-	text-decoration: rgb(255, 238, 0) 3px solid underline;
+    text-shadow: 1px 1px 8px rgba(13, 13, 13, 0.8);
+	// text-decoration: rgba(13, 13, 13, 0.2) 3px solid underline;
 }
 #inputLabel {
 	margin-top: 4.5rem;
@@ -59,18 +62,19 @@ h1 {
 #userInteraction button {
 	padding: 5px 8px;
 	border: 1px solid black;
-	background-color: rgb(255, 238, 0);
+	background-color: rgba(255, 207, 87, 255);
 	border-radius: 30px;
 	font-weight: 650;
+    cursor: pointer;
 }
 #userInteraction button:hover {
-	background-color: rgb(240, 224, 0);
+	background-color: rgba(251, 187, 87, 255);
 	color: rgb(13, 13, 13); 
 }
 main {
 	display: grid;
 	grid-template-columns: 5% 30% 30% 30% 5%;
-	margin-top: 3rem;
+	margin-top: 5rem;
 }
 .main-left {
 	grid-column-start: 2;
