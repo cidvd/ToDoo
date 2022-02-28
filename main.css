@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: verdana;
+}
+header {
+	display: grid;
+	grid-template-columns: 20% 30% 15% 25% 10%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	height: 62px;
+
+}
+.header-left {
+	grid-column-start: 2;
+	display: flex;
+}
+header img {
+	max-height: 50px;
+	max-width: 50px;
+}
+h1 {
+	margin-top: .8rem;
+}
+.header-right {
+	grid-column-start: 4;
+}
+.header-right ul {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1.5rem;
+}
+.header-right li {
+	list-style: none;
+}
+.header-right li a {
+	text-decoration: none;
+	color: black;
+}
+.header-right li a:hover {
+	text-decoration: rgb(255, 238, 0) 3px solid underline;
+}
+#inputLabel {
+	margin-top: 4.5rem;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	font-weight: 650;
+}
+#userInteraction {
+	display: flex;
+	justify-content: center;
+}
+#userInteraction input{
+	margin-right: 10px;
+	padding: 2px 4px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+#userInteraction button {
+	padding: 5px 8px;
+	border: 1px solid black;
+	background-color: rgb(255, 238, 0);
+	border-radius: 30px;
+	font-weight: 650;
+}
+#userInteraction button:hover {
+	background-color: rgb(240, 224, 0);
+	color: rgb(13, 13, 13); 
+}
+main {
+	display: grid;
+	grid-template-columns: 5% 30% 30% 30% 5%;
+	margin-top: 3rem;
+}
+.main-left {
+	grid-column-start: 2;
+}
+.main-left h2 {
+	display: flex;
+	justify-content: center;
+	height: 70px;
+}
+.main-center {
+	grid-column-start: 3;
+}
+.main-center h2 {
+	display: flex;
+	justify-content: center;
+	height: 70px;
+}
+.main-right {
+	grid-column-start: 4;
+}
+.main-right h2 {
+	display: flex;
+	justify-content: center;
+	height: 70px;
+}
