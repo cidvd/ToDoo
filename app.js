@@ -1,4 +1,4 @@
-const placeholders = ["Walking my fish", "Eating my dog", "Hate Pooptin", "Dye my parrot", "Feeding my car", "Buy wirecard", "Sell CCIV", "Stalk with Palantir", "Short FACC", "Buy Nestle", "Vote for Karl Marx"];
+const placeholders = ["Brew some coffee", "Clean my keyboard", "Clean my car", "Buy groceries", "Wash my cloth's", "Do math homework", "Clean my room", "Call my granny", "Learn CSS", "Finish my course", "Learn git", "Read 20 sites"];
 const input = document.querySelector("#input");
 const interaction = document.querySelector("#userInteraction");
 const todoList = document.querySelector("#todoList");

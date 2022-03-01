@@ -22,6 +22,7 @@ header img {
 }
 h1 {
 	margin-top: .8rem;
+    color: rgba(76, 36, 29, 255);
 }
 .header-right {
 	grid-column-start: 4;
