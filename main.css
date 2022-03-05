@@ -125,6 +125,9 @@ main {
 .todoItemInnerImg:hover {
     opacity: 0.75;
 }
+.pAlert {
+    color: red;
+}
 /* .todoItem li{
     list-style: none;
     border: 1px solid black;

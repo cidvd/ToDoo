@@ -2,6 +2,7 @@ const placeholders = ["Brew some coffee", "Clean my keyboard", "Clean my car", "
 const input = document.querySelector("#input");
 const interaction = document.querySelector("#userInteraction");
 const todoList = document.querySelector("#todoList");
+const inputLabel = document.querySelector("#inputLabel");
 
 
 pholder(placeholders, input);
@@ -15,11 +16,16 @@ interaction.addEventListener('submit', function (e) {
     todoMove.src = "./images/remove.png";
     todoMove.classList.add("todoItemInnerImg");
     if (!input.value){
-        alert("Please enter a valid input!");
+        const invalidAlert = document.createElement("p");
+        invalidAlert.classList.add("pAlert");
+        inputLabel.innerText = "";
+        invalidAlert.innerText = "Please enter a valid input!";
+        inputLabel.append(invalidAlert);
     }
     else {
     newTodo.innerText = input.value;
     newTodo.classList.add("todoItemInner");
+    inputLabel.innerText = "Add a Todo";
     todoList.append(todoDiv);
     todoDiv.appendChild(newTodo);
     todoDiv.appendChild(todoMove);
