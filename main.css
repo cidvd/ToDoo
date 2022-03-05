@@ -43,6 +43,19 @@ h1 {
     text-shadow: 1px 1px 8px rgba(13, 13, 13, 0.8);
 	// text-decoration: rgba(13, 13, 13, 0.2) 3px solid underline;
 }
+.header-right li:nth-of-type(3n){
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2px 5px;
+    background-color: rgba(76, 36, 29, 255);
+}
+.header-right li:nth-of-type(3n):hover{
+    background-color: rgba(65, 30, 28, 255);
+    box-shadow: 0 0 2px black;
+}
+#login {
+    color: white;
+}
 #inputLabel {
 	margin-top: 4.5rem;
 	display: flex;
@@ -71,6 +84,7 @@ h1 {
 #userInteraction button:hover {
 	background-color: rgba(251, 187, 87, 255);
 	color: rgb(13, 13, 13); 
+    box-shadow: 0 0 1px black;
 }
 main {
 	display: grid;
