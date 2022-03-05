@@ -40,7 +40,7 @@ h1 {
 	color: black;
 }
 .header-right li a:hover {
-    text-shadow: 1px 1px 8px rgba(13, 13, 13, 0.8);
+   text-shadow: 1px 1px 8px rgba(13, 13, 13, 0.8);
 	// text-decoration: rgba(13, 13, 13, 0.2) 3px solid underline;
 }
 .header-right li:nth-of-type(3n){

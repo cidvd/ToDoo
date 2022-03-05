@@ -6,7 +6,6 @@ const todoList = document.querySelector("#todoList");
 
 pholder(placeholders, input);
 
-
 interaction.addEventListener('submit', function (e) {
     e.preventDefault();
     const newTodo = document.createElement("LI");
@@ -15,11 +14,16 @@ interaction.addEventListener('submit', function (e) {
     todoDiv.classList.add("todoItem");
     todoMove.src = "./images/remove.png";
     todoMove.classList.add("todoItemInnerImg");
+    if (!input.value){
+        alert("Please enter a valid input!");
+    }
+    else {
     newTodo.innerText = input.value;
     newTodo.classList.add("todoItemInner");
     todoList.append(todoDiv);
     todoDiv.appendChild(newTodo);
     todoDiv.appendChild(todoMove);
+    }
     del();
 });
 
