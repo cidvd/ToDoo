@@ -85,14 +85,6 @@ main {
 	justify-content: center;
 	height: 70px;
 }
-.main-center {
-	grid-column-start: 3;
-}
-.main-center h2 {
-	display: flex;
-	justify-content: center;
-	height: 70px;
-}
 .main-right {
 	grid-column-start: 4;
 }
