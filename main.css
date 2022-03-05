@@ -108,6 +108,9 @@ main {
 .todoItemInnerImg{
     grid-column-start: 3;
 }
+.todoItemInnerImg:hover {
+    opacity: 0.75;
+}
 /* .todoItem li{
     list-style: none;
     border: 1px solid black;

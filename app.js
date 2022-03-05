@@ -13,7 +13,7 @@ interaction.addEventListener('submit', function (e) {
     const todoMove = document.createElement("img");
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todoItem");
-    todoMove.src = "./images/moveRe.png";
+    todoMove.src = "./images/remove.png";
     todoMove.classList.add("todoItemInnerImg");
     newTodo.innerText = input.value;
     newTodo.classList.add("todoItemInner");
