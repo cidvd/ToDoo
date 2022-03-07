@@ -3,7 +3,7 @@ const input = document.querySelector("#input");
 const interaction = document.querySelector("#userInteraction");
 const todoList = document.querySelector("#todoList");
 const inputLabel = document.querySelector("#inputLabel");
-
+const doneList = document.querySelector("#doneList");
 
 pholder(placeholders, input);
 
@@ -12,9 +12,12 @@ interaction.addEventListener('submit', function (e) {
     const newTodo = document.createElement("LI");
     const todoMove = document.createElement("img");
     const todoDiv = document.createElement("div");
+    const todoDone = document.createElement("img");
     todoDiv.classList.add("todoItem");
     todoMove.src = "./images/remove.png";
     todoMove.classList.add("todoItemInnerImg");
+    todoDone.src= "./images/done.png";
+    todoDone.classList.add("todoDoneInnerImg");
     if (!input.value){
         const invalidAlert = document.createElement("p");
         invalidAlert.classList.add("pAlert");
@@ -28,8 +31,10 @@ interaction.addEventListener('submit', function (e) {
     inputLabel.innerText = "Add a Todo";
     todoList.append(todoDiv);
     todoDiv.appendChild(newTodo);
+    todoDiv.appendChild(todoDone);
     todoDiv.appendChild(todoMove);
     }
+	mov(todoDiv);
     del();
 });
 
@@ -43,6 +48,16 @@ function del() {
         this.parentElement.remove();
     }))
 
+}
+
+function mov(todoDiv) {
+	const movBtns = document.querySelectorAll(".todoDoneInnerImg");
+	const entireTodo = todoDiv;
+		movBtns.forEach(movBtn => movBtn.addEventListener('click', function () {
+        if (!movBtn.parentElement.classList.contains('todoItem')) return
+
+		doneList.parentElement.append(entireTodo);
+}))
 }
 
 function pholder(placeList, input) {
