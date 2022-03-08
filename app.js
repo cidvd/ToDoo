@@ -16,25 +16,24 @@ interaction.addEventListener('submit', function (e) {
     todoDiv.classList.add("todoItem");
     todoMove.src = "./images/remove.png";
     todoMove.classList.add("todoItemInnerImg");
-    todoDone.src= "./images/done.png";
+    todoDone.src = "./images/done.png";
     todoDone.classList.add("todoDoneInnerImg");
-    if (!input.value){
+    if (!input.value) {
         const invalidAlert = document.createElement("p");
         invalidAlert.classList.add("pAlert");
         inputLabel.innerText = "";
         invalidAlert.innerText = "Please enter a valid input!";
         inputLabel.append(invalidAlert);
+    } else {
+        newTodo.innerText = input.value;
+        newTodo.classList.add("todoItemInner");
+        inputLabel.innerText = "Add a Todo";
+        todoList.append(todoDiv);
+        todoDiv.appendChild(newTodo);
+        todoDiv.appendChild(todoDone);
+        todoDiv.appendChild(todoMove);
     }
-    else {
-    newTodo.innerText = input.value;
-    newTodo.classList.add("todoItemInner");
-    inputLabel.innerText = "Add a Todo";
-    todoList.append(todoDiv);
-    todoDiv.appendChild(newTodo);
-    todoDiv.appendChild(todoDone);
-    todoDiv.appendChild(todoMove);
-    }
-	mov(todoDiv);
+    mov();
     del();
 });
 
@@ -43,21 +42,20 @@ function del() {
 
     const delBtns = document.querySelectorAll(".todoItemInnerImg");
     delBtns.forEach(delBtn => delBtn.addEventListener('click', function () {
-        if (!delBtn.parentElement.classList.contains('todoItem')) return
 
         this.parentElement.remove();
     }))
 
 }
 
-function mov(todoDiv) {
-	const movBtns = document.querySelectorAll(".todoDoneInnerImg");
-	const entireTodo = todoDiv;
-		movBtns.forEach(movBtn => movBtn.addEventListener('click', function () {
-        if (!movBtn.parentElement.classList.contains('todoItem')) return
+function mov() {
+    const movBtns = document.querySelectorAll(".todoDoneInnerImg");
+    movBtns.forEach(movBtn => movBtn.addEventListener('click', function () {
 
-		doneList.parentElement.append(entireTodo);
-}))
+        doneList.append(this.parentElement);
+        // Hide movBtn after appending element into Done list
+        movBtn.style.display = 'none';
+    }))
 }
 
 function pholder(placeList, input) {
