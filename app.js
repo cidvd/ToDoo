@@ -53,8 +53,8 @@ function mov() {
     movBtns.forEach(movBtn => movBtn.addEventListener('click', function () {
 
         doneList.append(this.parentElement);
-        // Hide movBtn after appending element into Done list
-        movBtn.style.display = 'none';
+        // Remove movBtn after appending element into Done list
+        this.remove()
     }))
 }
 
