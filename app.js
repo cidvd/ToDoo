@@ -51,10 +51,15 @@ function del() {
 function mov() {
     const movBtns = document.querySelectorAll(".todoDoneInnerImg");
     movBtns.forEach(movBtn => movBtn.addEventListener('click', function () {
-
-        doneList.append(this.parentElement);
-        // Remove movBtn after appending element into Done list
-        this.remove()
+        
+        if(this.parentElement){
+            doneList.append(this.parentElement);
+            // Remove movBtn after appending element into Done list
+            this.remove();
+        }
+        
+        
+        
     }))
 }
 
