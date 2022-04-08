@@ -13,7 +13,7 @@ function uuidv4() {
 }
 pholder(placeholders, input);
 
-function renderCard(todoText, id, isNew, isDone) {
+function renderCard(todoText, id, isDone) {
     const newTodo = document.createElement("LI");
     const todoMove = document.createElement("img");
     const todoDiv = document.createElement("div");
@@ -55,7 +55,7 @@ interaction.addEventListener('submit', function (e) {
         input.focus();
         let taskData = {taskText: input.value, isDone: false};
         localStorage.setItem(id, JSON.stringify(taskData));
-        renderCard(input.value, id, true);
+        renderCard(input.value, id, false);
         input.value = "";
     }
 });
@@ -95,7 +95,7 @@ function init(){
     for(let i = 0; i < localStorage.length; i++){
         let key = localStorage.key(i);
         let value = JSON.parse(localStorage.getItem(key));
-        renderCard(value.taskText, key, false, value.isDone);
+        renderCard(value.taskText, key, value.isDone);
     }
 }
 init()
