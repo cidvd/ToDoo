@@ -12,3 +12,5 @@ After you have finished the todo, you can move it to the _done section_ by press
 In case you want to delte your todo, you can do it by just pressing the red button, which is located on the right site of the blue button.
 
 
+## How to save input
+Your todo's will be stored localy and you dont have to press anything to do so.
